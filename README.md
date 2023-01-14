@@ -11,7 +11,7 @@ For MacBook users who are running on Apple Silicon, the solution is very simple 
 ## Set Up and Installation
 ### Apple Silicon:
 1. Download [UTM](https://mac.getutm.app/) then open the downloaded file and follow the instructions to install it
-2. Download [the image](https://drive.google.com/file/d/16yB9sQu3UQ1nXqLO7BCxMFFvKGDZ24hd/view?usp=sharing) I built (Don't worry I built this image to be an exact clone of the class-provided one, every dependancy and libaray was rebuilt and recompiled to support ARM-based machines)
+2. [Download the image](https://drive.google.com/file/d/1AMgCKkmV1703feUnSyTFyaES8nmreFvj/view?usp=share_link) I built (Don't worry I built this image to be an exact clone of the class-provided one, every dependancy and libaray was rebuilt and recompiled to support ARM-based machines)
 3. Unzip the image you downloaded to a location that is SAFE and SECURE (I suggest making a new folder and naming it as the class name)
 4. Open UTM then select `file` -> `import virtual machine`
 
@@ -23,9 +23,12 @@ For MacBook users who are running on Apple Silicon, the solution is very simple 
 
 ![Image Settings](assets/1.png) 
 
-8. Ensure that the settings below match what you have, if not, then change them to match the settings in the images below.
+8. Ensure that the settings below match what you have, if not, then change them to match the settings in the images below. The yellow shapes show the FINAL STATE of the settings.
 
 ![RAM settings](assets/2.png)
+
+> **Warning**
+> After finishing this guide, if you find that the virtualization is running too slow/sluggish, go back into the settings (this screen), then double the amount of ram and cores, then save and start the image.
 
 ![Virtualization Settings](assets/3.png) 
 
@@ -52,10 +55,11 @@ For MacBook users who are running on Apple Silicon, the solution is very simple 
 > Everything below this line is completely optional and may only apply to Linux purists.
 
 ### SSH
-- Start the image then login using: 
+- Start the image then login locally using: 
 - Username: `seed`
 - Password: `dees`
-- Paste `hostname -I | awk '{print $1}'` into the console after logging in
+- `Sudo apt install ssh` on the terminal
+- Paste `hostname -I | awk '{print $1}'` into the terminal after logging in
 - Copy the IP address that was returned
 - Open up your favorite terminal (if you aren't using [Hyper](https://hyper.is/) you're missing out!) then paste this command in: `ssh seed@REPLACE_WITH_YOUR_IP_ADDRESS_FROM_ABOVE`
 - Type `seed` for the password
