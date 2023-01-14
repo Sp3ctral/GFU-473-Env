@@ -28,7 +28,7 @@ For MacBook users who are running on Apple Silicon, the solution is very simple 
 ![RAM settings](assets/2.png)
 
 > **Warning**
-> After finishing this guide, if you find that the virtualization is running too slow/sluggish, go back into the settings (this screen), then double the amount of ram and cores, then save and start the image.
+> After finishing this guide, if you find that the virtualization is running too slow/sluggish, go back into the settings (the above screen), then double the amount of ram and cores, then save and start the image.
 
 ![Virtualization Settings](assets/3.png) 
 
